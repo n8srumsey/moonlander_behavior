@@ -1,4 +1,3 @@
-from statistics import StatisticsError
 from .state import State
 
 class Condition:

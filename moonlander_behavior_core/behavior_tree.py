@@ -2,6 +2,7 @@ from .behavior import Behavior
 from .condition import Condition
 from .state import State
 
+
 class Node:
     def __init__(self, content) -> None:
         self.content = content
@@ -26,6 +27,5 @@ class BinaryBehaviorTree:
         self.root = None
     
     def propogate(self):
-        self.state.get_state()
+        self.state.update_state()
         self.root.propogate(self.state)
-
