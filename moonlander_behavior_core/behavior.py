@@ -1,5 +1,6 @@
-from .state import State
 from moonlander import Drone, meters_to_deg
+
+from .state import State
 
 class Behavior:
     def __init__(self, behavior_func: function) -> None:

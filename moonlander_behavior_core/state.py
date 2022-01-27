@@ -1,9 +1,9 @@
 from ArucoMarkerTracking import ArucoMultiTracker
-
+from moonlander import Drone
 
 class State:
-    def __init__(self, drone:Drone, ArucoTracker:ArucoMultiTracker=None) -> None:
-        self.drone:Drone = drone
+    def __init__(self, drone: Drone, ArucoTracker:ArucoMultiTracker=None) -> None:
+        self.drone = drone
         self.tracker:ArucoMultiTracker= ArucoTracker
     
         self.armed = drone.armed
