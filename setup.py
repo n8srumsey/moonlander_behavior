@@ -6,16 +6,16 @@ with open("README.md", "r", encoding="utf-8") as f:
 description = "A modular system to handle behavior logic for UAV drones."
 
 setuptools.setup(
-    name="Moonlander Behavior Core",
+    name="Moonlander Behavior",
     version="0.0.2",
     author="Nathan Rumsey",
     author_email="rumseyn@oregonstate.edu",
     description=description,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/n8srumsey/moonlander_behavior_core",
+    url="https://github.com/n8srumsey/moonlander_behavior",
     project_urls= {
-        "Issues": "https://github.com/n8srumsey/moonlander_behavior_core/issues"
+        "Issues": "https://github.com/n8srumsey/moonlander_behavior/issues"
     },
     packages=['moonlander_behavior_core'],
     install_requires=['git+https://github.com/InquisitivePenguin/moonlander.git', 

@@ -1,8 +1,8 @@
 from ArucoMarkerTracking import ArucoMultiTracker
 
-from moonlander_behavior_core.condition import *
-from moonlander_behavior_core.behavior import *
-from moonlander_behavior_core.behavior_tree import *
+from moonlander_behavior.condition import *
+from moonlander_behavior.behavior import *
+from moonlander_behavior.behavior_tree import *
 
 
 drone = Drone()
