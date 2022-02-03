@@ -1,13 +1,19 @@
 from moonlander import Drone, meters_to_deg
 
+from .behavior_tree import Node
 from .state import State
 
-class Behavior:
-    def __init__(self, behavior_func: function) -> None:
-        self._behavior = behavior_func
-
+class Behavior(Node):
+    def __init__(self, action: function, priority: int) -> None:
+        super().__init__(action)
+        self.priority = priority
+        
     def action(self, state: State) -> None:
-        self._behavior(state.drone, state)
+        self.func(state.drone, state)
+        
+    def propogate(self, _):
+        return self
+    
 
 
 """ Common Behaviors """

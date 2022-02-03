@@ -1,11 +1,17 @@
+from .behavior_tree import Node
 from .state import State
 
-class Condition:
-    def __init__(self, condition_func: function) -> None:
-        self._condition_function = condition_func
+class Condition(Node):
+    def __init__(self, func: function) -> None:
+        super().__init__(func)
 
     def check(self, state: State):
-        return self._condition_function(state)
+        return self.func(state)
+    
+    def propogate(self, state):
+        if self.check(state):
+            return self.true.propogate(state)
+        return self.false.propogate(state)
     
 """Common Conditions"""
 class DetectsAruco(Condition):
